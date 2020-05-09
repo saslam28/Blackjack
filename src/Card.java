@@ -8,13 +8,27 @@ public class Card {
 	private Suit mySuit;
 	private int myNumber;
 	
+	/** 
+	 * COnstructor is used below
+	 * @param aSuit
+	 * @param aNumber
+	 */
 	
 	public Card(Suit aSuit, int aNumber) {
 		
 		this.mySuit = aSuit;
-	    this.myNumber = aNumber;
-	    
-	    
+		
+		if (aNumber >= 1 && aNumber <= 13) {
+			 this.myNumber = aNumber;
+		}
+		 else
+		{
+			System.err.println( aNumber + "is not a valid card number");
+			System.exit(1);
+		
+			 
+		}
+		
 	}
 	
 	public int getNumber() {
@@ -22,7 +36,7 @@ public class Card {
 	}
 	 public String toString() {
 		 
-		 String numStr;
+		 String numStr = "Error";
 		 
 		 switch(this.myNumber) {
 		 
@@ -74,13 +88,16 @@ public class Card {
 			 numStr = "King";
 			 break;
 			 
-		 case 14:
+		 case 1:
 			 numStr = "Ace";
 			 break;
 			 
 			 
 		 
 		 }
+		 
+		 return numStr +" " + "of" + " " + mySuit.toString();
 	 }	
 	 
 }
+
