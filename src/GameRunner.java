@@ -11,7 +11,7 @@ public class GameRunner {
 		//initialise player objects
 		
 		
-		Player me = new Player("suleman");
+		Player me = new Player("Suleman");
 		Player dealer = new Player("Dealer");
 		
 		// Dealt two cards to dealer and me
@@ -49,7 +49,7 @@ public class GameRunner {
 					// add next card in deck and store whether player is busted
 					
 					meDone = !me.addCard(theDeck.dealNextCard());
-					dealer.printHand(true);
+					me.printHand(true);
 					
 					} else {
 						meDone = true;
