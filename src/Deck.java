@@ -103,7 +103,7 @@ public class Deck {
     	
     	// shift all the subsequent cards in the deck to the left by one index
     	
-    	for (int c = 0; c < this.numCards; c++) {
+    	for (int c = 1; c < this.numCards; c++) {
     		this.myCards[c-1] = this.myCards[c];
     		
     		this.myCards[this.numCards-1] = null;
